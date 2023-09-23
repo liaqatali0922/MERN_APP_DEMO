@@ -2,7 +2,13 @@ const express=require('express');
 const cors=require('cors');
 const mongoose = require("mongoose");
 const server = express()
-server.use(cors())
+server.use(cors(
+    {
+        origin:[""],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 
 server.use(express.json());
 
