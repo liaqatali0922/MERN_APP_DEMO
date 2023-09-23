@@ -15,7 +15,7 @@ async function handleSubmit(e){
   
   try
   {
-  await fetch("http://localhost:8080/demo",{
+  await fetch("https://mern-app-demo.vercel.app/demo",{
     method:'POST',
     body:JSON.stringify(form),
     headers:{
@@ -30,7 +30,7 @@ async function handleSubmit(e){
 }
 async function getList(e) {
   e.preventDefault()
-let res = await fetch("http://localhost:8080/demo", {
+let res = await fetch("https://mern-app-demo.vercel.app/demo", {
   method: "GET",
  });
 const d = await res.json()
